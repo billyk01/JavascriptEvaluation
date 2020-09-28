@@ -51,7 +51,7 @@ function changeBackgroungColor(className) {
   setInterval( function () {
     
   var elems = document.querySelectorAll(className);
-  var index = 0, length = elems.length;
+  var index = 0, length = elems.length; 
     
     for ( ; index < length; index++) {
       var randomColor = Math.floor(Math.random()*16777215).toString(16);
