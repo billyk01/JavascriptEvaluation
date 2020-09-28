@@ -23,3 +23,50 @@ gridGenerator.prototype.run = function(){
   console.log(this.table());
   }
 
+/**
+ * Matrix
+ */
+
+gridGenerator.prototype.matrix = function() {
+ 
+ var table = document.createElement("table");
+  for (var i = 0; i < this.xAxis; i++) {
+    var tr = document.createElement("tr");
+    for (var j = 0; j < this.yAxis; j++) {
+      var td = document.createElement("td");
+      tr.appendChild(td);
+    }
+    table.appendChild(tr);
+  }
+  document.body.appendChild(table);
+ }
+
+
+/**
+* Change Backgroung Color
+*/
+
+function changeBackgroungColor(className) {
+   
+  setInterval( function () {
+    
+  var elems = document.querySelectorAll(className);
+  var index = 0, length = elems.length;
+    
+    for ( ; index < length; index++) {
+      var randomColor = Math.floor(Math.random()*16777215).toString(16);
+      elems[index].style.backgroundColor = "#"+randomColor;
+    }
+  },2000);
+}
+
+var tableStyle = document.querySelector("table");
+var trStyle = document.querySelector("tr");
+var tdStyle = document.querySelector("td");
+tab.matrix(); 
+tableStyle.style.width = "100%" ;
+tableStyle.style.height = "350px" ;
+
+var tab = new gridGenerator(4,6);
+changeBackgroungColor("td");
+
