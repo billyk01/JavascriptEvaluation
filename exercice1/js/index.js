@@ -60,13 +60,18 @@ function changeBackgroungColor(className) {
   },2000);
 }
 
+var tab = new gridGenerator(4,4);
+tab.matrix(); 
+
 var tableStyle = document.querySelector("table");
 var trStyle = document.querySelector("tr");
 var tdStyle = document.querySelector("td");
-tab.matrix(); 
+
+
 tableStyle.style.width = "100%" ;
 tableStyle.style.height = "350px" ;
 
-var tab = new gridGenerator(4,6);
+
+
 changeBackgroungColor("td");
 

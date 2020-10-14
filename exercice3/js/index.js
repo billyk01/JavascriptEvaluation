@@ -25,10 +25,12 @@ var table = document.createElement("table");
   }
 
 document.body.appendChild(table);
+
 var tableStyle = document.querySelector("table");
 var trStyle = document.querySelector("tr");
-var tdStyle = document.querySelector("td");
-tableStyle.style.width = "350px" ;
-tableStyle.style.height = "350px" ;
-tdStyle.style.border = "solid black 3px";
+var tdStyle = document.querySelectorAll("td");
 
+
+tableStyle.style.width = "35%" ;
+tableStyle.style.height = "350px" ;
+tdStyle.style.border = "solid black 5px" ; 
